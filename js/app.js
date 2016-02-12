@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+//pulls tweet text and time fron localstorage when you refresh
   for (var i = 1; i < localStorage.length + 1; i += 2) {
     $('#stream').prepend('<div class="tweet"><div class="content"><img class="avatar" src="img/alagoon.jpg" /><strong class="fullname">BKing</strong><span class="username">@tasty</span><p class="tweet-text">' + localStorage.getItem(i) + '</p><div class="tweet-actions"><ul><li><span class="icon action-reply"></span> Reply</li><li><span class="icon action-retweet"></span> Retweet</li><li><span class="icon action-favorite"></span> Favorite</li><li><span class="icon action-more"></span> More</li></ul></div><div class="time">' + '<p><span data-livestamp="' + localStorage.getItem(i + 1) + '"></span></p>' + '</div></div>');
   }
@@ -38,6 +39,13 @@ $(document).ready(function() {
     }
   });
 
+//grab fullname, username, and tweet text when the reply button is clicked, could be used to set up a reply thing
+  $('.action-retweet').parent().on('click', function() {
+    var fullName = $($(this).parents()[2]).find('.fullname').text();
+    var userName = $($(this).parents()[2]).find('.username').text();
+    var tweetText = $($(this).parents()[2]).find('.tweet-text').text();
+  });
+
   //shrink textarea and fade out tweet controls on blur
   $('textarea').blur(function() {
     $(this).animate({
@@ -46,7 +54,7 @@ $(document).ready(function() {
     $('#tweet-controls').fadeOut();
   });
 
-  //enclosure to up key count for localstorage
+  //enclosure to up key count for localstorage, pushes tweet and time into two different items
   var addTweetClosure = function(task) {
     var count = localStorage.length + 1;
     return function(task, time) {
