@@ -3,24 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<title>TWITTER</title>
 		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		<title>TWITTER</title>
 	</head>
 	<body>
-
 		<div id="page-container">
 			<div id="dashboard">
 				<div id="profile-summary">
 					<div class="content">
 						<img class="avatar" src="img/alagoon.jpg" />
-						<p>BKing</p>
+						<p>Brian K</p>
 					</div>
 				</div>
 				<div id="tweet-content">
 
 					<!-- STEP 2: When the user clicks on the textarea, the textarea should double in size and the character count and Tweet buttons should be revealed. -->
 					<!-- HINT: jQuery ".on" eventHandler -->
-					<textarea class="tweet-compose" placeholder="Compose new Tweet..."></textarea>
+					<textarea class="tweet-compose" placeholder="Compose new Tweet..."/></textarea>
 
 					<!-- STEP 1: Initially, the Tweet button and the character count button below should be hidden. -->
 					<!-- HINT: Use CSS -->
@@ -39,9 +38,10 @@
 			<div id="main">
 				<h2>Tweets</h2>
 				<div id="stream">
+
 					<!-- STEP 5: When the user successfully inputs characters and clicks the “Tweet” button, a new tweet should be created and added to the tweet stream in the main column, using the user’s fake profile image in the top left and username/fullname. -->
 					<!-- HINT: jQuery ".prepend" method -->
-					<div class="tweet" id="clo">
+					<div class="tweet">
 						<div class="content">
 							<img class="avatar" src="img/damenleeturks.jpg" />
 							<strong class="fullname">My BFF</strong>
@@ -91,7 +91,7 @@
 							</div>
 							<div class="reply">
 								<img class="avatar" src="img/alagoon.jpg" />
-								<textarea class="tweet-compose" placeholder="Reply to @mybff"></textarea>
+								<textarea class="tweet-compose" placeholder="Reply to @mybff"/></textarea>
 							</div>
 						</div>
 					</div><!-- .tweet -->
@@ -131,7 +131,7 @@
 							</div>
 							<div class="reply">
 								<img class="avatar" src="img/alagoon.jpg" />
-								<textarea class="tweet-compose" placeholder="Reply to @mybff"></textarea>
+								<textarea class="tweet-compose" placeholder="Reply to @mybff"/></textarea>
 							</div>
 						</div>
 					</div><!-- .tweet -->
@@ -171,16 +171,16 @@
 							</div>
 							<div class="reply">
 								<img class="avatar" src="img/alagoon.jpg" />
-								<textarea class="tweet-compose" placeholder="Reply to @mybff"></textarea>
+								<textarea class="tweet-compose" placeholder="Reply to @mybff"/></textarea>
 							</div>
 						</div>
 					</div><!-- .tweet -->
 				</div><!-- #stream -->
 			</div><!-- #main -->
 		</div><!-- #page-container -->
-	<script src="/js/jquery-2.0.3.min.js"></script>
-	<script src="/js/moment.js"></script>
-	<script src="/js/livestamp.js"></script>
-	<script src="/js/app.js"></script>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/livestamp.js"></script>
+<script src="js/app.js"></script>
 	</body>
 </html>
